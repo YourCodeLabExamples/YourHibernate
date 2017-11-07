@@ -16,6 +16,22 @@ public class CustomerService {
 		dao.insert(customer);
 	}
 	
+	public void updateCustomer(Customer customer){
+		dao.update(customer);
+	}
+	
+	public void deleteCustomer(Customer customer){
+		dao.delete(customer);
+	}
+	
+	public Customer findCustomerById(Integer id){
+		return dao.findById(id);
+	}
+	
+	public List<Customer> searchCustomerByName(String name){
+		return dao.searchByName(name);
+	}
+	
 	public List<Customer> listAll(){
 		return dao.listAll();
 	}
